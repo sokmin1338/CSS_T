@@ -1,0 +1,73 @@
+### CSS 개요 ###
+* 웹 페이지의 디자인을 구성
+* CSS는 HTML 요소들이 어떻게 보이는가를 정의하는 스타일 시트 언어
+* W3C(World Wied Web Consortium)에서 만든 스타일 시트 언어
+* CSS는 별도 파일로 웹 페이지의 스타일을 저장할 수 있고, 사이트의 전체 스타일을 쉽게 제어/변경 가능
+
+
+
+
+### CSS 구성 요소 ###
+* 선택자(selector) : 스타일을 적용할 대상 지정
+
+* 속성명(property) : 속성의 이름
+
+* 속성값(value) : 속성에 적용할 값
+
+* 선택자 {속성명 : 속성 값;} 과 같이 사용하여 스타일 적용
+
+
+### CSS 선택자 ###
+기본 선택자
+기본 선택자 태그
+
+* 전체 선택자 : *{내용;}  = 모든 태그 선택
+* 태그 선택자 : 태그{내용;} = 지정한 태그 선택
+* id 선택자 : #아이디{내용;} = 특정 id 태그 선택(중복 없이)
+* class 선택자 : .클래스{내용;} = 특정 class 태그 선택(다중선택)
+* 속성 선택자 : 선택자[속성=값] = 특정 속성 또는 속성값 태그 선
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p {
+                background-color: aqua;
+            }
+
+            #id1 { color: red;
+                background-color: rgb(0, 60, 255);
+
+            }
+            .class1 {
+                color: purple;
+                background-color: greenyellow;
+            }
+            p.class2 {
+                color: rebeccapurple;
+                background-color: blue;
+            }
+            h1 {
+                color: black;
+            }
+            h1[text] {
+                color: brown;
+            }
+            input[type="password"] {
+                background-color: coral;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>p</p>
+        <p id="id1">id1인</p>
+        <p class="class1">class1인 p</p>
+        <p class="class2">class2인 p</p>
+        <h1>h1</h1>
+        <h1 text="h1_text">text 속성 h1</h1>
+        <form>
+            <input type="password">
+        </form>
+    </body>
+</html>
